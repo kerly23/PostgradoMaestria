@@ -41,8 +41,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="55dp"
         android:layout_marginTop="150dp"
         android:layout_marginEnd="55dp"
@@ -52,49 +52,49 @@
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/button8"
+                android:id="@+id/btnsistemas"
                 android:layout_width="289dp"
                 android:layout_height="47dp"
                 android:layout_marginTop="8dp"
                 android:text="Facultad de Inge de Sist Compu" />
 
             <Button
-                android:id="@+id/button7"
+                android:id="@+id/btnmecanica"
                 android:layout_width="289dp"
                 android:layout_height="47dp"
                 android:layout_marginTop="8dp"
                 android:text="Facultad de Ingeniería Mecánica" />
 
             <Button
-                android:id="@+id/button5"
+                android:id="@+id/btnindustrial"
                 android:layout_width="289dp"
                 android:layout_height="47dp"
                 android:layout_marginTop="8dp"
                 android:text="Facultad de Ingeniería Industrial" />
 
             <Button
-                android:id="@+id/button4"
+                android:id="@+id/btnelectrica"
                 android:layout_width="289dp"
                 android:layout_height="47dp"
                 android:layout_marginTop="8dp"
                 android:text="Facultad de Ingeniería Eléctrica" />
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/btncivil"
                 android:layout_width="289dp"
                 android:layout_height="47dp"
                 android:layout_marginTop="8dp"
                 android:text="Facultad de Ingeniería Civil" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/btnciencias"
                 android:layout_width="289dp"
                 android:layout_height="47dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="8dp"
                 android:text="Facultad de Ciencias y Tecnología" />
         </LinearLayout>
     </ScrollView>
