@@ -13,7 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Facultades"></activity>
+        <activity android:name=".Fsistemas"></activity>
+        <activity android:name=".webfacultades" />
+        <activity android:name=".Facultades" />
         <activity android:name=".WebMenu" />
         <activity android:name=".MainActivity">
             <intent-filter>

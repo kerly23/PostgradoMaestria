@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">PregradoMestria</string>
     <string name="btnoferta">Facultades</string>
+    <string name="btnsistemas">Sistemas</string>
+
+
 </resources>

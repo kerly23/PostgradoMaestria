@@ -26,7 +26,7 @@ public class WebMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web_menu);
 
-        mWebView=findViewById(R.id.menuweb);
+        mWebView=findViewById(R.id.facultadesweb);
         Intent intent = getIntent();
 
         String webSite=intent.getStringExtra("links");

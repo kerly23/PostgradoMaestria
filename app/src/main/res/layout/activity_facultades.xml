@@ -60,6 +60,7 @@
                 android:layout_width="289dp"
                 android:layout_height="47dp"
                 android:layout_marginTop="8dp"
+                android:onClick="Sistemas"
                 android:text="Facultad de Inge de Sist Compu" />
 
             <Button
