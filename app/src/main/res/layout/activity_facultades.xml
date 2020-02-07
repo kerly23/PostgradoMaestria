@@ -60,6 +60,7 @@
                 android:layout_width="289dp"
                 android:layout_height="47dp"
                 android:layout_marginTop="8dp"
+                android:drawableLeft="@drawable/sistemas"
                 android:onClick="Sistemas"
                 android:text="Facultad de Inge de Sist Compu" />
 
@@ -99,19 +100,5 @@
                 android:text="Facultad de Ciencias y Tecnología" />
         </LinearLayout>
     </ScrollView>
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="358dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="74dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
