@@ -38,7 +38,7 @@
                 android:id="@+id/textView8"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Postgrados"
+                android:text="  Postgrados"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display2"
                 android:textColor="@color/colorPrimaryLight"
                 android:textSize="20dp"
@@ -46,7 +46,7 @@
 
             <Button
 
-                android:id="@+id/btnauditoria"
+                android:id="@+id/btnpauditoria"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
@@ -56,7 +56,7 @@
                 android:text="Postgrado en Auditoría de Sistemas y Evaluación de Control Informático" />
 
             <Button
-                android:id="@+id/button12"
+                android:id="@+id/btnpinformatica"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
@@ -64,7 +64,7 @@
                 android:text="Postgrado en Informática Educativa" />
 
             <Button
-                android:id="@+id/button13"
+                android:id="@+id/btnping"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
@@ -72,7 +72,7 @@
                 android:text="Postgrado en Ingeniería de Software" />
 
             <Button
-                android:id="@+id/button14"
+                android:id="@+id/btnpredes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
@@ -83,44 +83,44 @@
                 android:id="@+id/textView9"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Maestrias"
+                android:text="  Maestrias"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display2"
                 android:textColor="@color/colorPrimaryLight"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/button15"
+                android:id="@+id/btnmauditoria"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Maestría en Auditoría de Sistemas y Evaluación de Control Informático" />
 
             <Button
-                android:id="@+id/button16"
+                android:id="@+id/btnminformatica"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Maestría en Informática Educativa" />
 
             <Button
-                android:id="@+id/button17"
+                android:id="@+id/btnming"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Maestría en Ingeniería de Software" />
 
             <Button
-                android:id="@+id/button18"
+                android:id="@+id/btnmredes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Maestría en Redes de Comunicación de Datos" />
 
             <Button
-                android:id="@+id/button19"
+                android:id="@+id/btnmseguridad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Maestría en Seguridad Informática" />
 
             <Button
-                android:id="@+id/button20"
+                android:id="@+id/btnmciencias"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Maestría en Ciencias de Tecnología de Información y Comunicación" />
