@@ -28,4 +28,10 @@ public class Facultades extends AppCompatActivity {
         Intent sistemas = new Intent(this, Fsistemas.class);
         startActivity(sistemas);
     }
+
+    public void Mecanica (View view){
+        Intent mecanica = new Intent(this, fmecanica.class);
+        startActivity(mecanica);
+    }
+
 }
