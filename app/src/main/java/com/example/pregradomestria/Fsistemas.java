@@ -5,20 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class Fsistemas extends AppCompatActivity {
 
-    Button pauditoria;
-    Button pinformatica;
-    Button ping;
-    Button predes;
-    Button mauditoria;
-    Button minformatica;
-    Button ming;
-    Button mredes;
-    Button mseguridad;
-    Button mciencias;
+    ListView listpostgrados;
+    ArrayList<String> names;
 
     String[] urls = new String[10];
 
@@ -27,18 +23,23 @@ public class Fsistemas extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fsistemas);
 
-        pauditoria = findViewById(R.id.btnpauditoria);
-        pinformatica = findViewById(R.id.btnpinformatica);
-        ping = findViewById(R.id.btnping);
-        predes= findViewById(R.id.btnpredes);
+        listpostgrados = (ListView) findViewById(R.id.listpostgrados);
+        names = new ArrayList<String>();
+        names.add("Postgrado en Auditoria de Sistemas y Evaluacion de Control Informatico");
+        names.add("Postgrado en Informatica Educativa");
+        names.add("Postgrado en Ingenieria de Software");
+        names.add("Postgrado en Redes de Comunicacion de Datos");
 
-        mauditoria = findViewById(R.id. btnmauditoria);
-        minformatica= findViewById(R.id.btnminformatica);
-        ming= findViewById(R.id.btnming);
-        mredes=findViewById(R.id.btnmredes);
-        mseguridad= findViewById(R.id.btnmseguridad);
-        mciencias = findViewById(R.id.btnmciencias);
+        names.add("Maestría en Auditoria de Sistemas y Evaluacion de Control Informatico");
+        names.add("Maestría en Informatica Educativa");
+        names.add("Maestría en Ingenieria de Software");
+        names.add("Maestría en Redes de Comunicacion de Datos");
+        names.add("Maestría en Seguridad Informatica");
+        names.add("Maestría en Ciencias de Tecnologia de Informacion y Comunicacion");
 
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, names);
+        listpostgrados.setAdapter(adapter);
 
         urls[0] ="http://www.fisc.utp.ac.pa/maestria-y-postgrado-en-auditoria-de-sistemas-y-evaluacion-de-control-informatico";
         urls[1]="http://www.fisc.utp.ac.pa/maestria-y-postgrado-en-informatica-educativa";
@@ -52,95 +53,65 @@ public class Fsistemas extends AppCompatActivity {
         urls[8]="http://www.fisc.utp.ac.pa/maestria-en-seguridad-informatica";
         urls[9]="http://www.fisc.utp.ac.pa/maestria-en-ciencias-de-tecnologia-de-la-informacion-y-comunicacion";
 
-        pauditoria.setOnClickListener(new View.OnClickListener() {
+        listpostgrados.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),webfacultades.class);
-                intent.putExtra("links",urls[0]);
-                startActivity(intent);
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                switch (position) {
+                    case 0:
+                        Intent intent1 = new Intent(getApplicationContext(),webfacultades.class);
+                        intent1.putExtra("links",urls[0]);
+                        startActivity(intent1);
+                        break;
+                    case 1:
+                        Intent intent2  = new Intent(getApplicationContext(),webfacultades.class);
+                        intent2.putExtra("links",urls[1]);
+                        startActivity(intent2);
+                        break;
+                    case 2:
+                        Intent intent3 = new Intent(getApplicationContext(),webfacultades.class);
+                        intent3.putExtra("links",urls[2]);
+                        startActivity(intent3);
+                        break;
+                    case 3:
+                        Intent intent4 = new Intent(getApplicationContext(),webfacultades.class);
+                        intent4.putExtra("links",urls[3]);
+                        startActivity(intent4);
+                        break;
+                    case 4:
+                        Intent intent5 = new Intent(getApplicationContext(),webfacultades.class);
+                        intent5.putExtra("links",urls[4]);
+                        startActivity(intent5);
+                        break;
+                    case 5:
+                        Intent intent6 = new Intent(getApplicationContext(),webfacultades.class);
+                        intent6.putExtra("links",urls[5]);
+                        startActivity(intent6);
+                        break;
+                    case 6:
+                        Intent intent7 = new Intent(getApplicationContext(),webfacultades.class);
+                        intent7.putExtra("links",urls[6]);
+                        startActivity(intent7);
+                        break;
+                    case 7:
+                        Intent intent8 = new Intent(getApplicationContext(),webfacultades.class);
+                        intent8.putExtra("links",urls[7]);
+                        startActivity(intent8);
+                        break;
+                    case 8:
+                        Intent intent9 = new Intent(getApplicationContext(),webfacultades.class);
+                        intent9.putExtra("links",urls[8]);
+                        startActivity(intent9);
+                        break;
+                    case 9:
+                        Intent intent10 = new Intent(getApplicationContext(),webfacultades.class);
+                        intent10.putExtra("links",urls[9]);
+                        startActivity(intent10);
+                        break;
+
+                }
             }
+
         });
 
-        pinformatica.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),webfacultades.class);
-                intent.putExtra("links",urls[1]);
-                startActivity(intent);
-            }
-        });
-
-        ping.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),webfacultades.class);
-                intent.putExtra("links",urls[2]);
-                startActivity(intent);
-            }
-        });
-
-        predes.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),webfacultades.class);
-                intent.putExtra("links",urls[3]);
-                startActivity(intent);
-            }
-        });
-
-
-        mauditoria.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),webfacultades.class);
-                intent.putExtra("links",urls[4]);
-                startActivity(intent);
-            }
-        });
-
-        minformatica.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),webfacultades.class);
-                intent.putExtra("links",urls[5]);
-                startActivity(intent);
-            }
-        });
-
-        ming.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),webfacultades.class);
-                intent.putExtra("links",urls[6]);
-                startActivity(intent);
-            }
-        });
-
-        mredes.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),webfacultades.class);
-                intent.putExtra("links",urls[7]);
-                startActivity(intent);
-            }
-        });
-
-        mseguridad.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),webfacultades.class);
-                intent.putExtra("links",urls[8]);
-                startActivity(intent);
-            }
-        });
-
-        mciencias.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),webfacultades.class);
-                intent.putExtra("links",urls[9]);
-                startActivity(intent);
-            }
-        });
     }
 }

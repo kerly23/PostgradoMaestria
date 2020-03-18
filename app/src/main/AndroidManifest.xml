@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".fmecanica"></activity>
+        <activity android:name=".findustrial"></activity>
+        <activity android:name=".fmecanica" />
         <activity android:name=".Fsistemas" />
         <activity android:name=".webfacultades" />
         <activity android:name=".Facultades" />
