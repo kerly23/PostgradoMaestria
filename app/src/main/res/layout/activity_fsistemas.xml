@@ -1,131 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Fsistemas"
     >
-
-    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/imageView22"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                app:srcCompat="@drawable/banner"
-                tools:ignore="MissingConstraints" />
-
-            <TextView
-                android:id="@+id/textView7"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Facultad de Ingeniería de Sistemas Computacionales"
-                android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                android:textColor="@color/colorPrimary"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:orientation="vertical" >
 
-            <TextView
-                android:id="@+id/textView8"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="  Postgrados"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-                android:textColor="@color/colorPrimaryLight"
-                android:textSize="20dp"
-                android:textStyle="bold" />
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    app:srcCompat="@drawable/banner"
+                    tools:ignore="MissingConstraints" />
 
-            <Button
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_marginTop="-7dp"
+                    android:text="Postgrados y Maestrias"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textSize="20sp" />
 
-                android:id="@+id/btnpauditoria"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:isScrollContainer="false"
-                android:linksClickable="false"
-                android:outlineProvider="bounds"
-                android:text="Postgrado en Auditoría de Sistemas y Evaluación de Control Informático" />
+                <ListView
+                    android:id="@+id/listpostgrados"
+                    android:layout_width="match_parent"
+                    android:layout_height="445dp"
+                    android:layout_marginTop="20dp" />
+            </LinearLayout>
+        </ScrollView>
 
-            <Button
-                android:id="@+id/btnpinformatica"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:outlineProvider="bounds"
-                android:text="Postgrado en Informática Educativa" />
 
-            <Button
-                android:id="@+id/btnping"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:outlineProvider="bounds"
-                android:text="Postgrado en Ingeniería de Software" />
 
-            <Button
-                android:id="@+id/btnpredes"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:outlineProvider="paddedBounds"
-                android:text="Postgrado en Redes de Comunicación de Datos" />
 
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="  Maestrias"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-                android:textColor="@color/colorPrimaryLight"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/btnmauditoria"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Maestría en Auditoría de Sistemas y Evaluación de Control Informático" />
-
-            <Button
-                android:id="@+id/btnminformatica"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Maestría en Informática Educativa" />
-
-            <Button
-                android:id="@+id/btnming"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Maestría en Ingeniería de Software" />
-
-            <Button
-                android:id="@+id/btnmredes"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Maestría en Redes de Comunicación de Datos" />
-
-            <Button
-                android:id="@+id/btnmseguridad"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Maestría en Seguridad Informática" />
-
-            <Button
-                android:id="@+id/btnmciencias"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Maestría en Ciencias de Tecnología de Información y Comunicación" />
-        </LinearLayout>
-    </ScrollView>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
 
