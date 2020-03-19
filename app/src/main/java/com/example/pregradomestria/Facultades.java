@@ -39,4 +39,9 @@ public class Facultades extends AppCompatActivity {
         startActivity(industrial);
     }
 
+    public void Electrica (View view){
+        Intent industrial = new Intent(this, felectrica.class);
+        startActivity(industrial);
+    }
+
 }
