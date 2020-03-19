@@ -12,7 +12,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 public class findustrial extends AppCompatActivity {
-    ListView listpostgrados;
+    ListView listpostgradosind;
     ArrayList<String> names;
 
     String[] urls = new String[15];
@@ -23,7 +23,7 @@ public class findustrial extends AppCompatActivity {
         setContentView(R.layout.activity_findustrial);
 
 
-        listpostgrados = (ListView) findViewById(R.id.listpostgrados);
+        listpostgradosind = (ListView) findViewById(R.id.listpostgrados);
         names = new ArrayList<String>();
 
         names.add("Postgrado En Alta Gerencia");
@@ -45,7 +45,7 @@ public class findustrial extends AppCompatActivity {
 
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, names);
-        listpostgrados.setAdapter(adapter);
+        listpostgradosind.setAdapter(adapter);
 
         urls[0]="http://www.fii.utp.ac.pa/postgrado-en-alta-gerencia";
         urls[1]="http://www.fii.utp.ac.pa/postgrado-en-formulacion-evaluacion-y-gestion-de-proyectos-de-inversion";
@@ -64,7 +64,7 @@ public class findustrial extends AppCompatActivity {
         urls[13]="http://www.fii.utp.ac.pa/maestria-en-sistemas-logisticos-y-operaciones-con-especializacion-en-centros-de-distribucion";
         urls[14]="http://www.fii.utp.ac.pa/maestria-en-sistemas-logisticos-y-operaciones-con-especializacion-en-planificacion-de-la-demanda";
 
-        listpostgrados.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        listpostgradosind.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position) {

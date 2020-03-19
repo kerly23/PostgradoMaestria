@@ -13,7 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".findustrial"></activity>
+        <activity android:name=".fcivil"></activity>
+        <activity android:name=".felectrica" />
+        <activity android:name=".findustrial" />
         <activity android:name=".fmecanica" />
         <activity android:name=".Fsistemas" />
         <activity android:name=".webfacultades" />

@@ -4,6 +4,7 @@
     <string name="btnsistemas">Sistemas</string>
     <string name="btnmecanica">Mecanica</string>
     <string name="btnindustrial">Industrial</string>
+    <string name="btelectrica">Electrica</string>
 
 
 </resources>
