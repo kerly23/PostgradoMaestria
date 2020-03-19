@@ -3,15 +3,18 @@ package com.example.pregradomestria;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 
 public class findustrial extends AppCompatActivity {
+    Button button;
     ListView listpostgradosind;
     ArrayList<String> names;
 
@@ -147,6 +150,22 @@ public class findustrial extends AppCompatActivity {
                 }
             }
 
+        });
+
+        button=findViewById(R.id.button);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            boolean subject;
+            boolean message;
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
+                        "mailto","postgrado.fii@utp.ac.pa", null));
+                intent.putExtra(Intent.EXTRA_SUBJECT, subject);
+                intent.putExtra(Intent.EXTRA_TEXT, message);
+                startActivity(Intent.createChooser(intent, "Seleccione su cliente de email:"));
+
+            }
         });
 
     }
