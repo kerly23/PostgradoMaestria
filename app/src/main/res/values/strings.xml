@@ -4,7 +4,10 @@
     <string name="btnsistemas">Sistemas</string>
     <string name="btnmecanica">Mecanica</string>
     <string name="btnindustrial">Industrial</string>
-    <string name="btelectrica">Electrica</string>
+    <string name="btnelectrica">Electrica</string>
+    <string name="btncivil">Civil</string>
+    <string name="btnciencias">Ciencias</string>
+
 
     <string name="contact">Contactanos!</string>
 
