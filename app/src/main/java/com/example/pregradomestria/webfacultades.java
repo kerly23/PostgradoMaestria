@@ -1,10 +1,16 @@
 package com.example.pregradomestria;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
 import android.app.DownloadManager;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.webkit.CookieManager;
@@ -13,9 +19,24 @@ import android.webkit.URLUtil;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Toast;
 
 public class webfacultades extends AppCompatActivity {
     WebView wfacultades;
+
+    // Function for check permission already granted or not
+    public static boolean hasPermissions(Context context, String... permissions) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && context != null && permissions != null) {
+            for (String permission : permissions) {
+                if (ActivityCompat.checkSelfPermission(context, permission) != PackageManager.PERMISSION_GRANTED) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+
     @Override
     public void onBackPressed() {
         if (wfacultades.canGoBack()){
@@ -42,6 +63,19 @@ public class webfacultades extends AppCompatActivity {
         WebSettings webSettings= wfacultades.getSettings();
         webSettings.setJavaScriptEnabled(true);
 
+        //  Permission check
+        if (!hasPermissions(getApplicationContext(), new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE})) {
+            // Permission ask
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 111);
+        } else {
+// if permission is already granted than load url
+            Toast.makeText(getApplicationContext(),"el permiso fue dado",Toast.LENGTH_LONG).show();
+        }
+
+
+
+
+
         wfacultades.setDownloadListener(new DownloadListener()
         {
             public void onDownloadStart(String url, String userAgent, String contentDisposition, String mimetype, long contentLength) {
@@ -64,7 +98,9 @@ public class webfacultades extends AppCompatActivity {
 
                 new Thread("Browser download") {
                     public void run() {
+
                         dm.enqueue(request);
+
                     }
                 }.start();
             }
